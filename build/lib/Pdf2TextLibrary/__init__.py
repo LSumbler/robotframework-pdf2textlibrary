@@ -16,7 +16,7 @@ class Pdf2TextLibrary(object):
         codec = 'utf-8'
         laparams = LAParams()
         device = TextConverter(rsrcmgr, retstr, codec=codec, laparams=laparams)
-        fp = file(path, 'rb')
+        fp = open(path, 'rb')
         interpreter = PDFPageInterpreter(rsrcmgr, device)
         password = ""
         maxpages = 0
@@ -36,7 +36,7 @@ class Pdf2TextLibrary(object):
         codec = 'utf-8'
         laparams = LAParams()
         device = TextConverter(rsrcmgr, retstr, codec=codec, laparams=laparams)
-        fp = file(path, 'rb')
+        fp = open(path, 'rb')
         interpreter = PDFPageInterpreter(rsrcmgr, device)
         password = ""
         maxpages = 0
